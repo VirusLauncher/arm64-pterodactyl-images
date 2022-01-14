@@ -4,13 +4,13 @@
         "version": "PTDL_v1",
         "update_url": null
     },
-    "exported_at": "2022-01-11T20:25:25-04:00",
+    "exported_at": "2022-01-14T12:18:26-04:00",
     "name": "ARM64-Nginx",
-    "author": "unknown@unknown.com",
+    "author": "krisdookharan15@gmail.com",
     "description": "Nginx built for ARM64",
     "features": null,
     "images": [
-        "viruslauncher\/arm64-nginx:latest"
+        "viruslauncher\/arm64-pterodactyl-images:nginx"
     ],
     "file_denylist": [],
     "startup": "{{STARTUP_CMD}}",
@@ -18,7 +18,7 @@
         "files": "{\r\n    \"nginx\/conf.d\/default.conf\": {\r\n        \"parser\": \"file\",\r\n        \"find\": {\r\n            \"    listen \": \"    listen {{server.build.default.port}};\"\r\n        }\r\n    }\r\n}",
         "startup": "{\r\n    \"done\": \"\",\r\n    \"userInteraction\": []\r\n}",
         "logs": "{\r\n    \"custom\": false,\r\n    \"location\": \"logs\/latest.log\"\r\n}",
-        "stop": "^C"
+        "stop": "^^C"
     },
     "scripts": {
         "installation": {
