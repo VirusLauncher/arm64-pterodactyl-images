@@ -31,4 +31,4 @@ jobs:
           platforms: linux/amd64/v8
           push: true
           tags: |
-            viruslauncher/arm64-pterodactyl-images:nginx
+            viruslauncher/arm64-pterodactyl-images:nodejs16
