@@ -6,9 +6,9 @@ on:
     - cron: "0 0 * * 1"
   push:
     branches:
-      - nginx
+      - main
     paths:
-      - ./**
+      - ./nginx/**
       
 jobs:
   push:
@@ -26,8 +26,8 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - uses: docker/build-push-action@v2
         with:
-          context: .
-          file: ./Dockerfile
+          context: ./nginx
+          file: ./nginx/Dockerfile
           platforms: linux/amd64/v8
           push: true
           tags: |
