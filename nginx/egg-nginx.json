@@ -4,7 +4,7 @@
         "version": "PTDL_v1",
         "update_url": null
     },
-    "exported_at": "2022-01-14T12:18:26-04:00",
+    "exported_at": "2022-01-18T20:35:25-04:00",
     "name": "ARM64-Nginx",
     "author": "krisdookharan15@gmail.com",
     "description": "Nginx built for ARM64",
@@ -22,7 +22,7 @@
     },
     "scripts": {
         "installation": {
-            "script": "#!\/bin\/ash\r\n\r\ncd \/mnt\/server\r\n\r\napk --update add git\r\n\r\ngit clone https:\/\/github.com\/VirusLauncher\/arm64-nginx-pterodactyl\/ .\/temp\r\n\r\ncp -r .\/temp\/nginx \/mnt\/server\/\r\ncp -r .\/temp\/php-fpm \/mnt\/server\/\r\ncp -r .\/temp\/webroot \/mnt\/server\/\r\ncp .\/temp\/start.sh \/mnt\/server\/\r\n\r\nchmod +x \/mnt\/server\/start.sh\r\n\r\nrm -rf .\/temp",
+            "script": "#!\/bin\/ash\r\n\r\ncd \/mnt\/server\r\n\r\napk --update add git\r\n\r\ngit clone https:\/\/github.com\/VirusLauncher\/arm64-pterodactyl-images .\/temp\r\n\r\ncp -r .\/temp\/nginx\/nginx \/mnt\/server\/\r\ncp -r .\/temp\/nginx\/php-fpm \/mnt\/server\/\r\ncp -r .\/temp\/nginx\/webroot \/mnt\/server\/\r\ncp .\/temp\/nginx\/start.sh \/mnt\/server\/\r\n\r\nchmod +x \/mnt\/server\/start.sh\r\n\r\nrm -rf .\/temp",
             "container": "alpine:latest",
             "entrypoint": "ash"
         }
