@@ -1,4 +1,4 @@
-name: build arm64 nodejs16
+name: build arm64 expose
 
 on:
   workflow_dispatch:
