@@ -28,7 +28,7 @@ jobs:
         with:
           context: ./EXPOSE
           file: ./EXPOSE/Dockerfile
-          platforms: linux/amd64/v8
+          platforms: linux/arm64
           push: true
           tags: |
             viruslauncher/arm64-pterodactyl-images:expose
