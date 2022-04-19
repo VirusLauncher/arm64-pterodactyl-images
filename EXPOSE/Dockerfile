@@ -1,4 +1,4 @@
-FROM        arm64v8/node:16-buster-slim
+FROM        arm64v8/node:17-buster-slim
 
 LABEL       author="Kris Dookharan" maintainer="krisdookharan15@gmail.com"
 
