@@ -1,4 +1,4 @@
-FROM        oven/bun:latest
+FROM        oven/bun:latest as bun-base
 LABEL       author="Kris Dookharan" maintainer="krisdookharan15@gmail.com"
 
 RUN         install_packages ffmpeg iproute2 git dnsutils build-essential
