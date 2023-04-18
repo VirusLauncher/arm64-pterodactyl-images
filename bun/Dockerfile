@@ -3,7 +3,7 @@ FROM        arm64v8/debian:buster-slim as get
 
 WORKDIR     /tmp
 
-RUN         apt-get update
+RUN         apt update
 RUN         apt-get install curl unzip -y
 RUN         curl -LO https://github.com/oven-sh/bun/releases/download/bun-v0.5.9/bun-linux-aarch64.zip \
     && unzip bun-linux-aarch64.zip
@@ -13,7 +13,7 @@ FROM        arm64v8/debian:buster-slim
 LABEL       author="Kris Dookharan" maintainer="krisdookharan15@gmail.com"
 
 RUN         apt update \
-    && apt-get install -y ffmpeg iproute2 git sqlite3 python3 ca-certificates tzdata dnsutils build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev \
+    && apt-get install -y ffmpeg ca-certificates tzdata dnsutils build-essential \
     && npm -g install npm@latest \
     && useradd -m -d /home/container container
 
