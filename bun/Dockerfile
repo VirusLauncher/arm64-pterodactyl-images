@@ -1,9 +1,11 @@
-FROM        oven/bun:latest as bun-base
+FROM        arm64v8/debian:buster-slim
 LABEL       author="Kris Dookharan" maintainer="krisdookharan15@gmail.com"
 
-RUN         install_packages ffmpeg iproute2 git dnsutils build-essential
-RUN         npm -g install npm@latest
-RUN         useradd -m -d /home/container container
+RUN         apt update \
+    && apt-get install -y ffmpeg curl iproute2 git sqlite3 python3 ca-certificates tzdata dnsutils build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev \
+    && curl -fsSL https://bun.sh/install | bash \
+    && npm -g install npm@latest \
+    && useradd -m -d /home/container container
 
 USER        container
 ENV         USER=container HOME=/home/container
