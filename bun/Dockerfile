@@ -17,7 +17,7 @@ RUN         apt update \
     && npm -g install npm@latest \
     && useradd -m -d /home/container container
 
-COPY --from=get /tmp/bun-linux-x64/bun /usr/local/bin/bun
+COPY --from=get /tmp/bun-linux-aarch64/bun /usr/local/bin/bun
 
 USER        container
 ENV         USER=container HOME=/home/container
