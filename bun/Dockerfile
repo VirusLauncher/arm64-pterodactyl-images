@@ -1,15 +1,28 @@
+# https://github.com/oven-sh/bun/issues/211#issuecomment-1180644348
+FROM        arm64v8/debian:buster-slim as get
+
+WORKDIR     /tmp
+
+RUN         apt-get update
+RUN         apt-get install curl unzip -y
+RUN         curl -LO https://github.com/oven-sh/bun/releases/download/bun-v0.5.9/bun-linux-aarch64.zip \
+    && unzip bun-linux-aarch64.zip
+
+# Image from here
 FROM        arm64v8/debian:buster-slim
 LABEL       author="Kris Dookharan" maintainer="krisdookharan15@gmail.com"
 
 RUN         apt update \
-    && apt-get install -y ffmpeg curl iproute2 git sqlite3 python3 ca-certificates tzdata dnsutils build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev \
-    && curl -fsSL https://bun.sh/install | bash \
+    && apt-get install -y ffmpeg iproute2 git sqlite3 python3 ca-certificates tzdata dnsutils build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev \
     && npm -g install npm@latest \
     && useradd -m -d /home/container container
+
+COPY --from=get /tmp/bun-linux-x64/bun /usr/local/bin/bun
 
 USER        container
 ENV         USER=container HOME=/home/container
 WORKDIR     /home/container
+
 
 COPY        ./entrypoint.sh /entrypoint.sh
 CMD         [ "/bin/bash", "/entrypoint.sh" ]
