@@ -8,6 +8,7 @@
 - Docker Image(NodeJS 16): `viruslauncher/arm64-pterodactyl-images:nodejs16`
 - Docker Image(NodeJS 17): `viruslauncher/arm64-pterodactyl-images:nodejs17`
 - Docker Image(NodeJS 18): `viruslauncher/arm64-pterodactyl-images:nodejs18`
+- Docker Image(NodeJS 19): `viruslauncher/arm64-pterodactyl-images:nodejs19`
 - Changes: Added Support for Canvas
 
 ## [Java](https://github.com/VirusLauncher/arm64-pterodactyl-images/tree/main/java13)
