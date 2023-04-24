@@ -13,7 +13,7 @@
 - Changes: Added Support for Canvas
 
 ## [BunJS](https://github.com/VirusLauncher/arm64-pterodactyl-images/tree/main/bun)
-- Docker Image(BunJS): `viruslauncher/arm64-pterodactyl-images:bun`
+- Docker Image: `viruslauncher/arm64-pterodactyl-images:bun`
 
 ## [Java](https://github.com/VirusLauncher/arm64-pterodactyl-images/tree/main/java13)
 - Docker Image(Java 13): `viruslauncher/arm64-pterodactyl-images:java13`
