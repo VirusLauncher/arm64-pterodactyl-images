@@ -10,6 +10,8 @@
 - Docker Image(NodeJS 18): `viruslauncher/arm64-pterodactyl-images:nodejs18`
 - Docker Image(NodeJS 19): `viruslauncher/arm64-pterodactyl-images:nodejs19`
 - Docker Image(NodeJS 20): `viruslauncher/arm64-pterodactyl-images:nodejs20`
+- Docker Image(NodeJS 22): `viruslauncher/arm64-pterodactyl-images:nodejs22`
+- Docker Image(NodeJS 23): `viruslauncher/arm64-pterodactyl-images:nodejs23`
 - Changes: Added Support for Canvas
 
 ## [BunJS](https://github.com/VirusLauncher/arm64-pterodactyl-images/tree/main/bun)
