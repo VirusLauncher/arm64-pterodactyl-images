@@ -1,4 +1,4 @@
-FROM        arm64v8/node:20-buster-slim
+FROM        arm64v8/node:20-bookworm-slim
 
 LABEL       author="Kris Dookharan" maintainer="krisdookharan15@gmail.com"
 
