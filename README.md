@@ -23,3 +23,4 @@
 - Docker Image(Java 13): `viruslauncher/arm64-pterodactyl-images:java13`
 - Docker Image(Java 17): `viruslauncher/arm64-pterodactyl-images:java17`
 - Docker Image(Java 21): `viruslauncher/arm64-pterodactyl-images:java21`
+- Docker Image(Java 25): `viruslauncher/arm64-pterodactyl-images:java25`
