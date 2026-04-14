@@ -1,4 +1,4 @@
-FROM        arm64v8/openjdk:21-slim-buster
+FROM        arm64v8/openjdk:21-slim-bullseye
 
 LABEL       author="Kris Dookharan" maintainer="krisdookharan15@gmail.com"
 
